@@ -2,6 +2,7 @@
 I will release the code,data and pre-trained model around two or three weaks later.
 
 The code is released for academic research use only. Please contact me through senmaoy@gmail.com
+
 If you are interseted, join us on Wechat group where a dozen of t2i partners are waiting for you! If the QR code is expired, you can add this wechat: Unsupervised2020
 
 
