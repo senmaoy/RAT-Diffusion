@@ -1,7 +1,4 @@
-# Official pytorch implementation of our paper entitled: Data Extrapolation for Text-to-image Generation on Small Datasets
-# Recurrent-Affine-Transformation-for-Text-to-image-Synthesis
-
-Official Pytorch implementation for our paper [Data Extrapolation for Text-to-image Generation on Small Datasets]([https://arxiv.org/abs/2204.10482](https://arxiv.org/abs/2410.01638)) 
+#Official Pytorch implementation for our paper [Data Extrapolation for Text-to-image Generation on Small Datasets]([https://arxiv.org/abs/2204.10482](https://arxiv.org/abs/2410.01638)) 
 
 ![image](https://github.com/user-attachments/assets/605ed437-89dd-4ca8-901f-01ccd9771689)
 
@@ -13,7 +10,7 @@ Official Pytorch implementation for our paper [Data Extrapolation for Text-to-im
 ### Requirements
 - python 3.12.3
 - Pytorch 2.2.2
-- RTX 3090 or stronger GPUs
+- RTX 3090 or stronger GPUs(~7 days on CUB and Oxford with 2 3090 TI, ~30 days on COCO with 2 3090 TI)
 
 ### Installation
 
@@ -26,10 +23,10 @@ conda activate RAT
 ```
 
 ### Datasets Preparation
-1. Download the preprocessed metadata for [birds](https://drive.google.com/open?id=1O_LtUP9sch09QH3s_EBAgLEctBQ5JBSJ) [coco](https://drive.google.com/open?id=1rSnbIGNDGZeHlsUlLdahj0RJ9oo6lgH9) and save them to `data/`
-2. Download the [birds](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html) image data. Extract them to `data/birds/`.Raw text data of CUB dataset is avaiable [here](https://drive.google.com/file/d/1KyTQVo67izP4NEAAZBRnqrGG3yRh3azD/view?usp=sharing)
-3. Download [coco](http://cocodataset.org/#download) dataset and extract the images to `data/coco/`
-4. Download [flower](https://drive.google.com/file/d/1cL0F5Q3AYLfwWY7OrUaV1YmTx4zJXgNG/view?usp=sharing) dataset and extract the images to `data/flower/`.	Raw text data of flower dataset is avaiable [here](https://drive.google.com/file/d/1G4QRcRZ_s57giew6wgnxemwWRDb-3h5P/view?usp=sharing)
+1. Download the preprocessed metadata for [birds_dataset](https://drive.google.com/file/d/1s-R4dDrfry6W8jFv0KFe3Q8_gtCtFzSG/view?usp=drive_link), [birds_extra](https://drive.google.com/file/d/13o3HM7KacIciqJOtIBZco4IRzOebSB5Y/view?usp=drive_link), [flower_dataset](https://drive.google.com/file/d/1nmVmS2dPpHnSFfA1_3WQadtrXzvr-AbH/view?usp=drive_link), [flower_extra](https://drive.google.com/file/d/1o_Qwh0PV6ddbCjCNgUmTWFz2nFulkDBY/view?usp=drive_link),[coco_dataset](https://drive.google.com/file/d/17DvuQ6xeuXYyUboOsp3AIQh8JtbvAUKV/view?usp=drive_link),[coco_extra](https://drive.google.com/file/d/17aubtONziNoHe66hFgrpQsmKOpUtnV2h/view?usp=drive_link) and save them to `dataset/`
+2. Download the [bird_dataset](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html) image data and extract them to `dataset/bird/dataset`,Download the [bird_extra](https://drive.google.com/file/d/1oHz3sUPZ_dKDjNOIxZSMRXq-yX2EytXR/view?usp=drive_link) image data and extract them to `dataset/bird/extra`,
+3. Download the [flower_dataset](https://drive.google.com/file/d/1cL0F5Q3AYLfwWY7OrUaV1YmTx4zJXgNG/view?usp=sharing) image data and extract them to `dataset/flower/dataset`,Download the [flower_extra](https://drive.google.com/file/d/1e7FdY2Lgfqhg_5R11F6jQzTeqPrPhzlm/view?usp=drive_link) image data and extract them to `dataset/flower/extra`,
+4. Download the [coco_dataset](http://cocodataset.org/#download) image data and extract them to `dataset/coco/dataset`,Download the [coco_extra](https://drive.google.com/file/d/1dpFbdQely3MvgS9OFEgtQeqvOieI8a2Y/view?usp=drive_link) image data and extract them to `dataset/coco/extra`,
 
 
 
@@ -48,9 +45,9 @@ nproc_per_node means the number of GPUs
   - : `torchrun --nnodes=1 --nproc_per_node=2 --master_port=9903 --data-path='path to dataset' --ckpt='path to model trained on extra data' train.py`
 
 ### Pre-trained models
-1. Download the [pre-trained checkpoint](https://drive.google.com/open?id=1GNUKjVeyWYBJ8hEU-yrfYQpDOkxEyP3V) for CUB and save it to `../bird/`
-2. Download the [pre-trained checkpoint](https://drive.google.com/open?id=1zIrXCE9F6yfbEJIbNP5-YrEe2pZcPSGJ) for coco and save it to `../bird/`
-3. Download the [pre-trained checkpoint](https://drive.google.com/file/d/1Gb5jRhSN9QGgmACNnZvwJMbDLDuVqffp/view?usp=sharing) for flower and save it to `../bird/`
+1. Download the [pre-trained checkpoint](https://drive.google.com/file/d/1kHYKzdNn9n4qu-pNDpB_nYjP8Prne6d4/view?usp=drive_link) for CUB and save it to `./result/`
+2. Download the [pre-trained checkpoint](https://drive.google.com/file/d/1pGxht2W1vlvJyXoiEPmAJ1o779-8kevi/view?usp=drive_link) for flower and save it to `./result/`
+3. Download the [pre-trained checkpoint](https://drive.google.com/file/d/1Y2NamGpCZFOmZLVAGDh3PRzeG7J-p0Gd/view?usp=drive_link) for coco and save it to `./result/`
 
 ### Sampling
 
@@ -67,9 +64,8 @@ nproc_per_node means the number of GPUs
 
 
 
-**Evaluate RAT-GAN models:**
+**Evaluate RAT-Diffusion models:**
 
-- We compute inception score for models trained on birds using [StackGAN-inception-model](https://github.com/hanzhanggit/StackGAN-inception-model).
 - We compute FID for CUB and coco using (https://github.com/senmaoy/Inception-Score-FID-on-CUB-and-OXford.git). 
 
 ---
