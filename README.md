@@ -1,10 +1,12 @@
-# Official Pytorch implementation for our paper [Data Extrapolation for Text-to-image Generation on Small Datasets]([https://arxiv.org/abs/2204.10482](https://arxiv.org/abs/2410.01638)) 
+# Recurrent-Affine-Transformation-for-Text-to-image-Synthesis
 
-![image](https://github.com/user-attachments/assets/605ed437-89dd-4ca8-901f-01ccd9771689)
+Official Pytorch implementation for our paper [Data Extrapolation for Text-to-image Generation on Small Datasets](https://arxiv.org/abs/2410.01638) 
+
+![image](https://github.com/user-attachments/assets/a6ff845f-5a98-4bf6-b8e6-2843ca34a00f)
 
 ### Examples
 
-![image](https://github.com/user-attachments/assets/c4abaf29-ef06-4b8f-a139-0bf6a55f6152)
+![image](https://github.com/user-attachments/assets/59b31d2e-7281-4486-8ab8-814fc4fa3b31)
 
 ---
 ### Requirements
@@ -21,7 +23,7 @@ cd RAT-Diffusion
 conda env create -f environment.yml
 conda activate RAT
 ```
-
+If the cuda version doesn't match your GPUs, see https://pytorch.org/get-started/locally/ for a suitable cuda version
 ### Datasets Preparation
 1. Download the preprocessed metadata for [birds_dataset](https://drive.google.com/file/d/1s-R4dDrfry6W8jFv0KFe3Q8_gtCtFzSG/view?usp=drive_link), [birds_extra](https://drive.google.com/file/d/13o3HM7KacIciqJOtIBZco4IRzOebSB5Y/view?usp=drive_link), [flower_dataset](https://drive.google.com/file/d/1nmVmS2dPpHnSFfA1_3WQadtrXzvr-AbH/view?usp=drive_link), [flower_extra](https://drive.google.com/file/d/1o_Qwh0PV6ddbCjCNgUmTWFz2nFulkDBY/view?usp=drive_link),[coco_dataset](https://drive.google.com/file/d/17DvuQ6xeuXYyUboOsp3AIQh8JtbvAUKV/view?usp=drive_link),[coco_extra](https://drive.google.com/file/d/17aubtONziNoHe66hFgrpQsmKOpUtnV2h/view?usp=drive_link) and save them to `dataset/`
 2. Download the [bird_dataset](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html) image data and extract them to `dataset/bird/dataset`,Download the [bird_extra](https://drive.google.com/file/d/1oHz3sUPZ_dKDjNOIxZSMRXq-yX2EytXR/view?usp=drive_link) image data and extract them to `dataset/bird/extra`,
@@ -69,6 +71,8 @@ nproc_per_node means the number of GPUs
 - We compute FID for CUB and coco using (https://github.com/senmaoy/Inception-Score-FID-on-CUB-and-OXford.git). 
 
 ---
+### Ask for help
+I'm strugglling for a job concerning image generation. Any recommendations are welcome!快毕业了，真找不到对口的工作了哥！
 ### Citing RAT-Diffusion
 
 If you find RAT-Diffusion useful in your research, please consider citing our paper:
