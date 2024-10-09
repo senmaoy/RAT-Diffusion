@@ -1,10 +1,10 @@
-# Official Pytorch implementation for our paper [Data Extrapolation for Text-to-image Generation on Small Datasets]([https://arxiv.org/abs/2204.10482](https://arxiv.org/abs/2410.01638)) 
+# Official Pytorch implementation for [Data Extrapolation for Text-to-image Generation on Small Datasets]([https://arxiv.org/abs/2204.10482](https://arxiv.org/abs/2410.01638)) 
 
 ![image](https://github.com/user-attachments/assets/605ed437-89dd-4ca8-901f-01ccd9771689)
 
 ### Examples
 
-![image](https://github.com/user-attachments/assets/c4abaf29-ef06-4b8f-a139-0bf6a55f6152)
+![image](https://github.com/user-attachments/assets/59b31d2e-7281-4486-8ab8-814fc4fa3b31)
 
 ---
 ### Requirements
