@@ -1,4 +1,4 @@
-# Recurrent-Affine-Transformation-for-Text-to-image-Synthesis
+# Data Extrapolation for Text-to-image Generation on Small Datasets
 
 Official Pytorch implementation for our paper [Data Extrapolation for Text-to-image Generation on Small Datasets](https://arxiv.org/abs/2410.01638) 
 
