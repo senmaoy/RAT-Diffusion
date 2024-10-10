@@ -72,7 +72,8 @@ nproc_per_node means the number of GPUs
 
 ---
 ### Ask for help
-I'm strugglling for a job concerning image generation. Any recommendations are welcome!快毕业了，真找不到对口的工作了哥！
+I'm strugglling for a job concerning image generation. Any recommendations are welcome!快毕业了，真找不到对口的工作了哥！ 
+-email:  senmaoy@gmail.com -wechat: Unsupervised2020
 ### Citing RAT-Diffusion
 
 If you find RAT-Diffusion useful in your research, please consider citing our paper:
