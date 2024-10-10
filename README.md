@@ -23,7 +23,7 @@ cd RAT-Diffusion
 conda env create -f environment.yml
 conda activate RAT
 ```
-If the cuda version doesn't match your GPUs, see https://pytorch.org/get-started/locally/ for a suitable cuda version
+If the cuda version doesn't match your GPUs, see https://pytorch.org/get-started/locally/ for a suitable one
 ### Datasets Preparation
 1. Download the preprocessed metadata for [birds_dataset](https://drive.google.com/file/d/1s-R4dDrfry6W8jFv0KFe3Q8_gtCtFzSG/view?usp=drive_link), [birds_extra](https://drive.google.com/file/d/13o3HM7KacIciqJOtIBZco4IRzOebSB5Y/view?usp=drive_link), [flower_dataset](https://drive.google.com/file/d/1nmVmS2dPpHnSFfA1_3WQadtrXzvr-AbH/view?usp=drive_link), [flower_extra](https://drive.google.com/file/d/1o_Qwh0PV6ddbCjCNgUmTWFz2nFulkDBY/view?usp=drive_link),[coco_dataset](https://drive.google.com/file/d/17DvuQ6xeuXYyUboOsp3AIQh8JtbvAUKV/view?usp=drive_link),[coco_extra](https://drive.google.com/file/d/17aubtONziNoHe66hFgrpQsmKOpUtnV2h/view?usp=drive_link) and save them to `dataset/`
 2. Download the [bird_dataset](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html) image data and extract them to `dataset/bird/dataset`,Download the [bird_extra](https://drive.google.com/file/d/1oHz3sUPZ_dKDjNOIxZSMRXq-yX2EytXR/view?usp=drive_link) image data and extract them to `dataset/bird/extra`,
