@@ -68,8 +68,13 @@ nproc_per_node means the number of GPUs
 
 **Evaluate RAT-Diffusion models:**
 
-- We compute FID for CUB and coco using (https://github.com/senmaoy/Inception-Score-FID-on-CUB-and-OXford.git). 
+- We compute FID for CUB and coco using (https://github.com/senmaoy/Inception-Score-FID-on-CUB-and-OXford.git).
 
+**RAW Image Data:**
+1. Download the raw bird data for [birds_extra](https://drive.google.com/file/d/1gcXFLC6HurSCAmCpXpaN8l7KDYiH7cYA/view?usp=drive_link) (~50G), 
+2. Download the raw flower data for [flower_extra](https://drive.google.com/file/d/1VdrIoBcCQa5RrfMNSZVsSjKOSXWIno33/view?usp=drive_link) (~30G), 
+3. Download the raw coco data for [coco_extra](https://drive.google.com/file/d/1zJart0zaMuPMNgjHl8Mzd-6_y8SjYLsu/view?usp=drive_link)(~900G), 
+Note that! We only provide the urls of raw images because they are too big. It will spend 2~3 days to download these images. I will upload more scripts if needed.
 ---
 ### Ask for help
 I'm strugglling for a job concerning image generation. Any recommendations are welcome!快毕业了，真找不到对口的工作了哥！ 
