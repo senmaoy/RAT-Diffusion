@@ -26,7 +26,7 @@ conda activate RAT
 If the cuda version doesn't match your GPUs, see https://pytorch.org/get-started/locally/ for a suitable one
 ### Datasets Preparation
 1. Download the preprocessed metadata for [birds_dataset](https://drive.google.com/file/d/1s-R4dDrfry6W8jFv0KFe3Q8_gtCtFzSG/view?usp=drive_link), [birds_extra](https://drive.google.com/file/d/13o3HM7KacIciqJOtIBZco4IRzOebSB5Y/view?usp=drive_link), [flower_dataset](https://drive.google.com/file/d/1nmVmS2dPpHnSFfA1_3WQadtrXzvr-AbH/view?usp=drive_link), [flower_extra](https://drive.google.com/file/d/1o_Qwh0PV6ddbCjCNgUmTWFz2nFulkDBY/view?usp=drive_link),[coco_dataset](https://drive.google.com/file/d/17DvuQ6xeuXYyUboOsp3AIQh8JtbvAUKV/view?usp=drive_link),[coco_extra](https://drive.google.com/file/d/17aubtONziNoHe66hFgrpQsmKOpUtnV2h/view?usp=drive_link) and save them to `dataset/`
-2. Download the [bird_dataset](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html) image data and extract them to `dataset/bird/dataset`,Download the [bird_extra](https://drive.google.com/file/d/1oHz3sUPZ_dKDjNOIxZSMRXq-yX2EytXR/view?usp=drive_link) image data and extract them to `dataset/bird/extra`,
+2. Download the [bird_dataset](http://www.vision.caltech.edu/datasets/cub_200_2011/) image data and extract them to `dataset/bird/dataset`,Download the [bird_extra](https://drive.google.com/file/d/1oHz3sUPZ_dKDjNOIxZSMRXq-yX2EytXR/view?usp=drive_link) image data and extract them to `dataset/bird/extra`,
 3. Download the [flower_dataset](https://drive.google.com/file/d/1cL0F5Q3AYLfwWY7OrUaV1YmTx4zJXgNG/view?usp=sharing) image data and extract them to `dataset/flower/dataset`,Download the [flower_extra](https://drive.google.com/file/d/1e7FdY2Lgfqhg_5R11F6jQzTeqPrPhzlm/view?usp=drive_link) image data and extract them to `dataset/flower/extra`,
 4. Download the [coco_dataset](http://cocodataset.org/#download) image data and extract them to `dataset/coco/dataset`,Download the [coco_extra](https://drive.google.com/file/d/1dpFbdQely3MvgS9OFEgtQeqvOieI8a2Y/view?usp=drive_link) image data and extract them to `dataset/coco/extra`,
 
@@ -46,6 +46,8 @@ nproc_per_node means the number of GPUs
 nproc_per_node means the number of GPUs
   - : `torchrun --nnodes=1 --nproc_per_node=2 --master_port=9903 --data-path='path to dataset' --ckpt='path to model trained on extra data' train.py`
 
+  - The above is for general purpose 
+
 ### Pre-trained models
 1. Download the [pre-trained checkpoint](https://drive.google.com/file/d/1kHYKzdNn9n4qu-pNDpB_nYjP8Prne6d4/view?usp=drive_link) for CUB and save it to `./result/`
 2. Download the [pre-trained checkpoint](https://drive.google.com/file/d/1pGxht2W1vlvJyXoiEPmAJ1o779-8kevi/view?usp=drive_link) for flower and save it to `./result/`
@@ -53,14 +55,14 @@ nproc_per_node means the number of GPUs
 
 ### Sampling
 
-**Dwonload Pretrained Model**
+**Download Pretrained Model**
 nproc_per_node means the number of GPUs
   - : `python sample_simple.py`
 
 
 ### Evaluating
 
-**Dwonload Pretrained Model**
+**Download Pretrained Model**
 nproc_per_node means the number of GPUs
   - : `torchrun --nnodes=1 --nproc_per_node=2 --master_port=9902 --data-path='path to dataset' sample_ddp.py`
 
