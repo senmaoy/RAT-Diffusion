@@ -46,6 +46,8 @@ nproc_per_node means the number of GPUs
 nproc_per_node means the number of GPUs
   - : `torchrun --nnodes=1 --nproc_per_node=2 --master_port=9903 --data-path='path to dataset' --ckpt='path to model trained on extra data' train.py`
 
+  - The above is for general purpose 
+
 ### Pre-trained models
 1. Download the [pre-trained checkpoint](https://drive.google.com/file/d/1kHYKzdNn9n4qu-pNDpB_nYjP8Prne6d4/view?usp=drive_link) for CUB and save it to `./result/`
 2. Download the [pre-trained checkpoint](https://drive.google.com/file/d/1pGxht2W1vlvJyXoiEPmAJ1o779-8kevi/view?usp=drive_link) for flower and save it to `./result/`
