@@ -53,14 +53,14 @@ nproc_per_node means the number of GPUs
 
 ### Sampling
 
-**Dwonload Pretrained Model**
+**Download Pretrained Model**
 nproc_per_node means the number of GPUs
   - : `python sample_simple.py`
 
 
 ### Evaluating
 
-**Dwonload Pretrained Model**
+**Download Pretrained Model**
 nproc_per_node means the number of GPUs
   - : `torchrun --nnodes=1 --nproc_per_node=2 --master_port=9902 --data-path='path to dataset' sample_ddp.py`
 
