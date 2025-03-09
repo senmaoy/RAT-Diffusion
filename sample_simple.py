@@ -77,8 +77,7 @@ def main(args):
     diffusion = create_diffusion(str(args.num_sampling_steps))
     vae = AutoencoderKL.from_pretrained(f"stabilityai/sd-vae-ft-{args.vae}").to(device)
 
-    with open('text_clip2.pkl','rb') as f:
-            clip_fea = pickle.load(f).float()
+ 
     model_clip, preprocess = clip.load("ViT-B/32", device="cuda")
     text_raw=["A police man on a motorcycle is idle in front of a bush.",
 "Some red and green flower in a room.",
