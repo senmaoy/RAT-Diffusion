@@ -109,7 +109,13 @@ def main(args):
     pbar = tqdm(pbar) if rank == 0 else pbar
     total = 0
 
-    dataset = ImagePaths(args.data_path, size=256, random_crop=False)
+    transform = transforms.Compose([
+        transforms.Lambda(lambda pil_image: center_crop_arr(pil_image, args.image_size)),
+        transforms.RandomHorizontalFlip(),
+        transforms.ToTensor(),
+        transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5], inplace=True)
+    ])
+    dataset = ImagePaths(args.data_path,  transform=transform)
 
     sampler = DistributedSampler(
         dataset,
@@ -188,7 +194,7 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data-path", type=str, default = '/home/yesenmao/disk/dataset/coco/coco_sent/captions_val2014.json')
+    parser.add_argument("--data-path", type=str, default = '/disk/yesenmao/ldm/RAT_diffusion/pair_list_coco_extra.pkl')
     parser.add_argument("--model", type=str, choices=list(DiT_models.keys()), default="DiT-L/2")
     parser.add_argument("--vae",  type=str, choices=["ema", "mse"], default="ema")
     parser.add_argument("--sample-dir", type=str, default="samples")
